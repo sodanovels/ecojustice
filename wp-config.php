@@ -16,13 +16,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'eco2014_contentTest');
+define('DB_NAME', 'ecojustice');
 
 /** MySQL database username */
-define('DB_USER', 'eco2014_content');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'lWkyZk#$U6ax');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
