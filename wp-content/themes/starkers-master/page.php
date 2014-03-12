@@ -28,9 +28,18 @@
 		
 		<section>
 			<div class="wrapper">
-				<h2><?php the_title(); ?></h2>
-				<?php the_content(); ?>
-				<?php #comments_template( '', true ); ?>
+				<h1><?php the_title(); ?></h1>
+				<h3>Summary or other descriptive meta goes here</h3>
+				<hr>
+				<div class="row quad">
+					<div class="col wider">	
+						<?php the_content(); ?>
+						<?php #comments_template( '', true ); ?>
+					</div>
+					<div class="col">
+						<h4>Hi! I am a sidebar.</h4>
+					</div>
+				</div>
 			</div>
 		</section>
 		
