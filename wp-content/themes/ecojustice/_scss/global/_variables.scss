@@ -1,0 +1,66 @@
+/* --------------------------------------------------
+
+	VARIABLES
+	
+-------------------------------------------------- */
+/* !pump the baseline */
+$ratio				: minor-third();
+$base-font-size		: 18px;
+$base-line-height	: 26px;
+
+/* !colors */
+$black				: #313131;
+$white				: #fff;
+
+$blue_light			: #7fb9cf;
+$blue				: #257492;
+$blue_dark			: #667C72;
+
+$brown_light		: #D6CCAF;
+$brown				: #ADA07A;
+
+$green_light		: #BAD80A;
+$green				: #709302;
+
+$red				: #593D2B;
+
+
+$primary			: $blue_dark;
+$secondary			: #dcdcdc;
+$links				: $blue;
+
+/* !fx */
+$duration			: 360ms;
+$ez-e				: cubic-bezier(.94,.06,.32,1);
+$radius 			: 2px;
+
+/* !grids, layout */
+$spacer				: 44px;
+$width				: 100%;
+$max-width			: 1280px;
+
+$total-width		: 100%;
+$column-width		: 100;
+$gutter-width		: 44px;
+$columns			: 12;
+
+/* !johnny utah */
+$phone				: (width 0px 599px);
+$phablet			: 600px;
+$tabtop				: 900px;
+$desktop			: 1280px;
+
+/* style guide helpers */
+.swatch {
+	width: 10vw;
+	height: 10vw;
+	float: left;
+	margin: 0 2% 2% 0;
+	border: 2px solid rgba($black, 0.5);
+	display: block;
+	padding: $spacer;
+}
+.layout img {
+	margin: 2% 0;
+	border: 2px solid rgba($black, 0.5);
+}
