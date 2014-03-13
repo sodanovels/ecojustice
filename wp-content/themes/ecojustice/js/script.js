@@ -79,6 +79,9 @@ var UI = (function ($) {
     return jk;
 })(jQuery);
 
+
+
+
 /*
 	start it up
 */
@@ -86,5 +89,21 @@ var UI = (function ($) {
 jQuery(function ($) {
 
 	UI.init();
-	
+/*
+	Facebook Graph
+*/
+    $.getJSON( "http://graph.facebook.com/ecojustice/", function( data ) {
+      var likes;
+      $.each( data, function( key, val ) {
+	if (key === 'likes') {
+	    likes = val;
+	}
+	else{
+	    //Do nothing
+	}
+      });
+     $('.facebookLikes').html(likes);
+      
+    });
+
 });
