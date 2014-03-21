@@ -33,15 +33,7 @@
 								</style>
 								<ul class="ppl">
 									<div class="fb-like-box" data-href="https://www.facebook.com/ecojustice" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-									<!-- Commented out to try actual FB fans. 
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/taybenlor/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/aroon_sharma/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/artem_kostenko/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/megdraws/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/rdbannon/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/samgrover/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/uxpiper/128.jpg"></li>
-									<li><img src="https://s3.amazonaws.com/uifaces/faces/twitter/victor_haydin/128.jpg"></li>-->
+									
 								</ul>
 							</div>
 						</div>
@@ -78,4 +70,4 @@
 			</div> <!-- main -->
 		</div> <!-- viewport -->
 		
-<?php include($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/ecojustice/example.php') ?>
+<?php // This is the raw twitter feed in JSON include($_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/ecojustice/example.php') ?>

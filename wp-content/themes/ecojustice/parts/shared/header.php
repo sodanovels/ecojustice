@@ -3,13 +3,9 @@
 		<nav id="menu" role="navigation">
 			<div class="wrapper">
 				<div class="logo hide-phone"><a href="<!-- @path home/index.html -->">Ecojustice</a></div>
-				<ul>
-					<li><a href="<!-- @path approach/index.html -->">Approach</a></li>
-					<li><a href="<!-- @path issues/index.html -->">Issues</a></li>
-					<li><a href="<!-- @path people/index.html -->">People</a></li>
-					<li><a href="<!-- @path cases/case/index.html -->">Victories</a></li>
-					<li><a href="">Blog</a></li>
-				</ul>
+				
+					<?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
+				
 				<ul class="action">
 					<li><a href=""><span class="icon-search"></span></a>
 						<?php #get_search_form(); ?>
@@ -26,10 +22,11 @@
 			</div>
 			<section class="title">
 				<div class="wrapper">
-					<ul class="breadcrumb">
-						<li><a href="">Section</a></li>
-						<li><a href="">Section</a></li>
-						<li><a href=""><?php the_title(); ?></a></li>
-					</ul>
+					
+					<?php if(function_exists('bcn_display'))
+					{
+					    bcn_display();
+					}?>	
+					
 				</div>
 			</section>
