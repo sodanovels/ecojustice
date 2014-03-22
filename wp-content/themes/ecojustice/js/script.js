@@ -89,8 +89,18 @@ var UI = (function ($) {
 jQuery(function ($) {
 
 	UI.init();
+	
+
+	
 /*
+
+	!! DEVELOPMENT ONLY
+	!! everything below needs clean up before GO LIVE
+	!! we need to move all scripts into there own modules for production
+	
 	Facebook Graph
+	
+	
 */
     $.getJSON( "http://graph.facebook.com/ecojustice/", function( data ) {
       var likes;

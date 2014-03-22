@@ -16,11 +16,9 @@
 								</ul>
 								<p>
 									<a class="twitter-timeline" href="https://twitter.com/ecojustice_ca" data-widget-id="443926259018371072" data-theme="light" data-tweet-limit="2" data-chrome="nofooter noheader noborders noscrollbar transparent">Tweets by @ecojustice_ca</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
-									</p>
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+									
+								</p>
 							</div>
 							<div class="col">
 								<h5>Facebook</h5>
@@ -47,21 +45,7 @@
 								<p>&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
 							</div>
 							<div class="col">
-								<nav>
-									<ul class="big">
-										<li><a href="">Reports &amp; Publications</a></li>
-										<li><a href="">Cases</a></li>
-										<li><a href="">Press Releases</a></li>
-									</ul>
-								</nav>	
-								<nav>
-									<ul>
-										<li><a href="">About</a></li>
-										<li><a href="">Careers</a></li>
-										<li><a href="">Privacy Policy</a></li>
-										<li><a href="">Contact</a></li>
-									</ul>
-								</nav>	
+								<?php Starkers_Utilities::get_template_parts( array( 'parts/menus/footer-major', 'parts/menus/footer' ) ); ?>
 							</div>
 						</div>
 					</div>

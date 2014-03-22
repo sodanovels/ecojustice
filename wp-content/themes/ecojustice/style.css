@@ -1,13 +1,3 @@
-/*
-Theme Name: Ecojustice
-Theme URI: http://ecojustice.ca 
-Description: Ecojustice website, based on Starkers
-Author: EUX
-Author URI: http://ethicalux.com
-Template: ecojustice
-Version: 0.1.0
-*/
-
 @import url(css/normalize.css);
 @import url(css/css/fontello.css);
 /* --------------------------------------------------
@@ -1391,22 +1381,22 @@ footer {
           color: #d6ccaf;
           font-weight: bold; }
       /* line 155, _scss/modules/_layout.scss */
-      footer ul.big {
+      footer ul.major {
         *zoom: 1;
         margin-top: 11px;
         margin-bottom: -22px; }
         /* line 27, _scss/global/_grid.scss */
-        footer ul.big:before, footer ul.big:after {
+        footer ul.major:before, footer ul.major:after {
           content: "";
           display: table; }
         /* line 31, _scss/global/_grid.scss */
-        footer ul.big:after {
+        footer ul.major:after {
           clear: both; }
         /* line 159, _scss/modules/_layout.scss */
-        footer ul.big li {
+        footer ul.major li {
           margin-right: 11px; }
           /* line 161, _scss/modules/_layout.scss */
-          footer ul.big li a {
+          footer ul.major li a {
             font-size: 16px;
             color: #709302; } }
 
