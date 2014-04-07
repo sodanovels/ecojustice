@@ -76,12 +76,13 @@ Template Name: Issues Main Template
 			<hr>
 			<h3>Related News</h3>
 			<ul class="options alt">
-				<!--Replace all of this with the same catagory grabbing title and links. Proably a people/climate cat for each section...?-->
-				<li><a href="">It's up to us. Go green with your music, urges Canadian musician</a></li>
-				<li><a href="">Excepteur sint occaecat cupidatat non proiden.</a></li>
-				<li><a href="">Occaecat cupidatat non proiden sint ecxpetuer laboris nisi ut alquip.</a></li>
-				<li><a href="">It's up to us. Go green with your music, urges Canadian musician</a></li>
-				<li><a href="">Occaecat cupidatat non proiden sint ecxpetuer laboris nisi ut alquip.</a></li>
+				<?php $recent = new WP_Query("cat=14&showposts=5"); while($recent->have_posts()) : $recent->the_post(); ?>
+				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></li>
+				<?php		
+				endwhile;
+				wp_reset_postdata();
+				?>
+				
 			</ul>
 		</div>
 		<div class="col">
@@ -89,11 +90,12 @@ Template Name: Issues Main Template
 			<h3>Related News</h3>
 			
 			<ul class="options alt">
-				<li><a href="">It's up to us. Go green with your music, urges Canadian musician</a></li>
-				<li><a href="">Excepteur sint occaecat cupidatat non proiden.</a></li>
-				<li><a href="">Occaecat cupidatat non proiden sint ecxpetuer laboris nisi ut alquip.</a></li>
-				<li><a href="">It's up to us. Go green with your music, urges Canadian musician</a></li>
-				<li><a href="">Occaecat cupidatat non proiden sint ecxpetuer laboris nisi ut alquip.</a></li>
+				<?php $recent = new WP_Query("cat=15&showposts=5"); while($recent->have_posts()) : $recent->the_post(); ?>
+				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></li>
+				<?php		
+				endwhile;
+				wp_reset_postdata();
+				?>
 			</ul>
 		</div>
 	</div>

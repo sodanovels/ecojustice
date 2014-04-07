@@ -4,11 +4,10 @@ Template Name: Issues Interior Template
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-			
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		
-		<?php if (has_post_thumbnail( $post->ID )) : ?>
+	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	
+	<?php	if (has_post_thumbnail( $post->ID )) : ?>
 			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 			
 		<?php endif; ?>
@@ -21,6 +20,7 @@ Template Name: Issues Interior Template
 			<?php 
 			$headerText = get_post_custom_values('Header');
 			echo $headerText[0];
+			
 			?>
 			</div>
 			
@@ -32,6 +32,7 @@ Template Name: Issues Interior Template
 		<h1>Our Victories</h1>
 		<div class="row">
 			<?php the_content(); ?>
+			<?php $currentPageTitle = get_the_title(); ?>
 		</div>
 		<hr>
 		<div class="grid">
@@ -50,8 +51,7 @@ Template Name: Issues Interior Template
 				<div>
 					<a href="<?php the_permalink(); ?>"><div class="media" style="background-image: url(<?=$image[0]?>);"></div></a>
 					
-					<div class="meta"><?php $category = get_the_category(); 
-echo $category[0]->cat_name;?></div>
+					<div class="meta"><?php echo  $currentPageTitle ?></div>
 					
 					<div class="desc">
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?> <?php the_excerpt(); ?></a>
