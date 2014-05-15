@@ -2,7 +2,8 @@
 	/**
 	 * Ecojustice_Utilities
 	 * @jessekorzan
-	 *
+	 * Jeremy Butler
+	 * 
 	 * v.0.1
 	 *
 	 * functions specific to Ecojustice theme & site features
@@ -65,6 +66,175 @@
 	    */
 	    echo '</ul>';
 	}
+	
+	/*
+	 *
+	 * This creates the custom post type of People (Which is lawyers, featured donors, scientests and the like)
+	 *
+	 */
+	function ecojustice_people() {
+	$labels = array(
+	  'name'               => _x( 'People', 'post type general name' ),
+	  'singular_name'      => _x( 'Person', 'post type singular name' ),
+	  'add_new'            => _x( 'Add New', 'person' ),
+	  'add_new_item'       => __( 'Add New Person' ),
+	  'edit_item'          => __( 'Edit Person' ),
+	  'new_item'           => __( 'New Person' ),
+	  'all_items'          => __( 'All People' ),
+	  'view_item'          => __( 'View People' ),
+	  'search_items'       => __( 'Search People' ),
+	  'not_found'          => __( 'No people found' ),
+	  'not_found_in_trash' => __( 'No people found in the Trash' ), 
+	  'parent_item_colon'  => '',
+	  'menu_name'          => 'People'
+	);
+	$args = array(
+	  'labels'        => $labels,
+	  'description'   => 'Listing of EcoJustice People: Lawyers, Scientests and Supporters',
+	  'public'        => true,
+	  'menu_position' => 5,
+	  'supports'      => array( 'title', 'editor', 'excerpt', 'custom-fields'),
+	  'has_archive'   => true,
+	);
+	register_post_type( 'people', $args ); 
+	}
+	add_action( 'init', 'ecojustice_people' );
+	
+	/*
+	 *
+	 * This creates the custom post type of Cases
+	 *
+	 */
+	function ecojustice_case() {
+	$labels = array(
+	  'name'               => _x( 'Cases', 'post type general name' ),
+	  'singular_name'      => _x( 'Case', 'post type singular name' ),
+	  'add_new'            => _x( 'Add New', 'case' ),
+	  'add_new_item'       => __( 'Add New Case' ),
+	  'edit_item'          => __( 'Edit Case' ),
+	  'new_item'           => __( 'New Case' ),
+	  'all_items'          => __( 'All Cases' ),
+	  'view_item'          => __( 'View Cases' ),
+	  'search_items'       => __( 'Search Cases' ),
+	  'not_found'          => __( 'No cases found' ),
+	  'not_found_in_trash' => __( 'No cases found in the Trash' ), 
+	  'parent_item_colon'  => '',
+	  'menu_name'          => 'Cases'
+	);
+	$args = array(
+	  'labels'        => $labels,
+	  'description'   => 'Listing of EcoJustice Cases',
+	  'public'        => true,
+	  'menu_position' => 6,
+	  'supports'      => array( 'title', 'editor', 'excerpt', 'custom-fields'),
+	  'has_archive'   => true,
+	);
+	register_post_type( 'case', $args ); 
+	}
+	add_action( 'init', 'ecojustice_case' );
+	
+	
+	/*
+	 *
+	 * This creates the custom post type of Press Releases
+	 *
+	 */
+	function ecojustice_press() {
+	$labels = array(
+	  'name'               => _x( 'Press Releases', 'post type general name' ),
+	  'singular_name'      => _x( 'Press Release', 'post type singular name' ),
+	  'add_new'            => _x( 'Add New', 'pressRelease' ),
+	  'add_new_item'       => __( 'Add New Press Release' ),
+	  'edit_item'          => __( 'Edit Press Release' ),
+	  'new_item'           => __( 'New Press Release' ),
+	  'all_items'          => __( 'All Press Releases' ),
+	  'view_item'          => __( 'View Press Releases' ),
+	  'search_items'       => __( 'Search Press Releases' ),
+	  'not_found'          => __( 'No press releases found' ),
+	  'not_found_in_trash' => __( 'No press releases found in the Trash' ), 
+	  'parent_item_colon'  => '',
+	  'menu_name'          => 'Press Releases'
+	);
+	$args = array(
+	  'labels'        => $labels,
+	  'description'   => 'Listing of EcoJustice Press Releases',
+	  'public'        => true,
+	  'menu_position' => 7,
+	  'supports'      => array( 'title', 'editor', 'excerpt', 'custom-fields'),
+	  'has_archive'   => true,
+	);
+	register_post_type( 'pressRelease', $args ); 
+	}
+	add_action( 'init', 'ecojustice_press' );
+	
+	/*
+	 *
+	 * This creates the custom post type of Case Studies (Not be confused with legal cases above)
+	 *
+	 */
+	function ecojustice_caseStudy() {
+	$labels = array(
+	  'name'               => _x( 'Case Studies', 'post type general name' ),
+	  'singular_name'      => _x( 'Case Study', 'post type singular name' ),
+	  'add_new'            => _x( 'Add New', 'caseStudy' ),
+	  'add_new_item'       => __( 'Add New Case Study' ),
+	  'edit_item'          => __( 'Edit Case Study' ),
+	  'new_item'           => __( 'New Case Study' ),
+	  'all_items'          => __( 'All Case Studies' ),
+	  'view_item'          => __( 'View Case Studies' ),
+	  'search_items'       => __( 'Search Case Studies' ),
+	  'not_found'          => __( 'No case studies found' ),
+	  'not_found_in_trash' => __( 'No case studies found in the Trash' ), 
+	  'parent_item_colon'  => '',
+	  'menu_name'          => 'Case Studies'
+	);
+	$args = array(
+	  'labels'        => $labels,
+	  'description'   => 'Listing of EcoJustice Case Studies',
+	  'public'        => true,
+	  'menu_position' => 8,
+	  'supports'      => array( 'title', 'editor', 'excerpt', 'custom-fields'),
+	  'has_archive'   => true,
+	);
+	register_post_type( 'caseStudies', $args ); 
+	}
+	add_action( 'init', 'ecojustice_caseStudy' );
+	
+	
+	/*
+	 *
+	 * This creates the custom post type of Newsletters
+	 *
+	 */
+	function ecojustice_newsletter() {
+	$labels = array(
+	  'name'               => _x( 'Newsletters', 'post type general name' ),
+	  'singular_name'      => _x( 'Newsletters', 'post type singular name' ),
+	  'add_new'            => _x( 'Add New', 'newsletter' ),
+	  'add_new_item'       => __( 'Add New Newsletter' ),
+	  'edit_item'          => __( 'Edit Newsletter' ),
+	  'new_item'           => __( 'New Newsletter' ),
+	  'all_items'          => __( 'All Newsletters' ),
+	  'view_item'          => __( 'View Newsletters' ),
+	  'search_items'       => __( 'Search Newsletters' ),
+	  'not_found'          => __( 'No newsletters found' ),
+	  'not_found_in_trash' => __( 'No newsletters found in the Trash' ), 
+	  'parent_item_colon'  => '',
+	  'menu_name'          => 'Newsletters'
+	);
+	$args = array(
+	  'labels'        => $labels,
+	  'description'   => 'Listing of EcoJustice Newsletters',
+	  'public'        => true,
+	  'menu_position' => 9,
+	  'supports'      => array( 'title', 'editor', 'excerpt', 'custom-fields'),
+	  'has_archive'   => true,
+	);
+	register_post_type( 'newsletter', $args ); 
+	}
+	add_action( 'init', 'ecojustice_newsletter' );
+	
+	
 	
 	/*
 	 *	Phase should equal "1","2","3" or it will return the default (blank) dashboard
