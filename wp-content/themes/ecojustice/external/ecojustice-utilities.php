@@ -65,4 +65,60 @@
 	    */
 	    echo '</ul>';
 	}
+	
+	/*
+	 *	Phase should equal "1","2","3" or it will return the default (blank) dashboard
+	 *	Status is a string for the little tooltip on the dashboard.
+	 *	Example syntax in wordpress post: [case_status phase="3" status="Victory!!"]
+	 *	Todo: Currently I'm using an inline style overwrite, but it would be good if a/b/c classes could be status classes and not structure/styling (or split into two diffrent classes)
+	 *	Also... should the tooltip move over as well on the diffrent statuses?
+	 */
+	function case_status_dashboard( $atts ) {
+	extract( shortcode_atts( array(
+		'phase' => '',
+		'status' => '',
+	), $atts ) );
+	echo '<div class="dashboard">
+	    <div class="status"><h2><span>Status</span>'.$status.'</h2></div>';
+	
+	switch($phase){
+	    case '1':
+		echo '<div class="stage a">In Progress</div>
+	    <div class="stage b">Victory</div>
+	    <div class="stage c">Closed</div>';
+	    break;
+	
+	    case '2':
+		echo '<div class="stage a">In Progress</div>
+	    <div class="stage b" style="background-color:#bad80a">Victory</div>
+	    <div class="stage c">Closed</div>';
+	    break;
+	
+	    case '3':
+		echo '<div class="stage a">In Progress</div>
+	    <div class="stage b" style="background-color:#bad80a">Victory</div>
+	    <div class="stage c" style="background-color:#bad80a">Closed</div>';
+	    break;
+		
+	    default:
+		echo 'Shit went wrong, nothing to see here';
+		
+	}
+	
+	echo '<a href="#ref" data-ref="#ref" class="toggler trigger"></a>
+	</div>';  
+
+	echo '<div id="ref" class="togglee">
+			<div class="row">
+				<div class="col">
+					<h4>Status Note</h4>
+					<p>	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				</div>
+				<div class="col">
+					<h4>Progress Levels Description</h4>
+					<p>	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				</div>
+			</div>
+		</div>';
+	}// End of case_status_dashboard
 ?>
