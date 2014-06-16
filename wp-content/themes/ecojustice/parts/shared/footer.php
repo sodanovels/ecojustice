@@ -1,3 +1,4 @@
+<!--
 				<section class="newsletter">
 					<div class="wrapper">
 						<div class="row">
@@ -37,6 +38,7 @@
 						</div>
 					</div>
 				</section>
+-->
 				<footer>
 					<div class="wrapper">
 						<div class="row">

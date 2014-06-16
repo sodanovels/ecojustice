@@ -56,6 +56,7 @@ var UI = (function ($) {
 
   	};
    	jk.flexslider = function () {
+   		console.log("work");
   		jk.config.$sliders.flexslider({
 			selector: ".slides .pane",
 	    	animation: "slide",
@@ -90,7 +91,7 @@ jQuery(function ($) {
 
 	UI.init();
 	
-
+	
 	
 /*
 
