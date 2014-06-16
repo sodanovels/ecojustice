@@ -3,6 +3,6 @@ ecojustice
 
 Ecojustice Wordpress Website
 
-##March 11.2014 (jesse)
-First pass at theme committed tonight.
-* Can remove placeholder for menus (global template - in "parts/shared" folder... header.php and footer.php)
+##June 16, 2014 (jesse)
+Roughed out templates for all pages.  Some CSS to redo (from original designs).
+50% of the way...
